@@ -1,0 +1,110 @@
+newowner@MacBookPro ~ % cd information_security
+newowner@MacBookPro information_security % mkdir lab03
+newowner@MacBookPro information_security % cd lab03
+newowner@MacBookPro lab03 % mk toy_shell.py 
+zsh: command not found: mk
+newowner@MacBookPro lab03 % touch toy_shell.py 
+newowner@MacBookPro lab03 % cd toy_shell.py 
+cd: not a directory: toy_shell.py
+newowner@MacBookPro lab03 % chmd 777 toy_shell.py 
+zsh: command not found: chmd
+newowner@MacBookPro lab03 % chomd 777 toy_shell.py 
+zsh: command not found: chomd
+newowner@MacBookPro lab03 % chmod 777 toy_shell.py 
+newowner@MacBookPro lab03 % nano toy_shell.py 
+newowner@MacBookPro lab03 % sudo mv toy_shell.py /usr/local/bin/toy_shell
+Password:
+Sorry, try again.
+Password:
+newowner@MacBookPro lab03 % sudo mv toy_shell.py /usr/local/bin/toy_shell
+mv: toy_shell.py: No such file or directory
+newowner@MacBookPro lab03 % touch toy_shell.py                    
+newowner@MacBookPro lab03 % chmod 777 toy_shell.py                       
+newowner@MacBookPro lab03 % nano toy_shell.py                            
+newowner@MacBookPro lab03 % sudo mv toy_shell.py /usr/local/bin/toy_shell
+newowner@MacBookPro lab03 % sudo chmod +x /usr/local/bin/toy_shell
+newowner@MacBookPro lab03 % cd ..
+newowner@MacBookPro information_security % cd dir
+newowner@MacBookPro dir % tou_shell
+zsh: command not found: tou_shell
+newowner@MacBookPro dir % toy_shell
+Toy Shell: List files and folders older than a given date (based on creation time)
+Enter a date in the format YYYY-MM-DD or type 'exit' to quit.
+toy-shell> 2025-09-02
+toy-shell> 2025-09-02
+toy-shell> 2024-09-02
+toy-shell> 2023-07-01
+toy-shell> exit
+Exiting toy shell.
+newowner@MacBookPro dir % toy_shell
+Toy Shell: List files and folders older than a given date (based on creation time)
+Enter a date in the format YYYY-MM-DD or type 'exit' to quit.
+toy-shell> 2024-11-01
+toy-shell> 200-11-1
+Invalid date format. Please use YYYY-MM-DD.
+toy-shell> exit      
+Exiting toy shell.
+newowner@MacBookPro dir % cd..
+zsh: command not found: cd..
+newowner@MacBookPro dir % cd ..
+newowner@MacBookPro information_security % cd ..
+newowner@MacBookPro ~ % toy_shell
+Toy Shell: List files and folders older than a given date (based on creation time)
+Enter a date in the format YYYY-MM-DD or type 'exit' to quit.
+toy-shell> 2025-09-02
+.vcpkg-clion (Folder, Created: 2025-06-04 20:25:16)
+Music (Folder, Created: 2024-03-29 09:39:58)
+database (Folder, Created: 2025-09-01 23:06:16)
+screenshot (Folder, Created: 2024-03-29 10:27:52)
+index.html (File, Created: 2024-12-29 15:37:45)
+nltk_data (Folder, Created: 2025-06-25 17:34:56)
+Downloadswhatsapp_chat (Folder, Created: 2025-02-09 15:49:25)
+.CFUserTextEncoding (File, Created: 2024-03-04 19:49:47)
+Les nombres.docx (File, Created: 2025-02-16 13:13:53)
+Yandex.Disk.localized (Folder, Created: 2024-06-15 19:47:37)
+.vcpkg (Folder, Created: 2024-03-19 13:20:11)
+.psql_history (File, Created: 2025-08-28 11:39:51)
+Pictures (Folder, Created: 2024-05-23 14:08:58)
+.zprofile (File, Created: 2024-03-19 13:16:32)
+Qt (Folder, Created: 2025-06-12 13:02:52)
+.zsh_history (File, Created: 2025-09-01 13:51:18)
+посмотреть (Folder, Created: 2024-07-16 15:32:49)
+Desktop (Folder, Created: 2025-08-29 18:17:16)
+Library (Folder, Created: 2025-08-31 17:00:01)
+.conan-clion-plugin (Folder, Created: 2024-03-27 21:28:41)
+.lesshst (File, Created: 2025-09-01 23:02:20)
+3x.docx (File, Created: 2025-02-21 08:29:38)
+.oracle_jre_usage (Folder, Created: 2024-08-31 20:27:47)
+README.md (File, Created: 2025-09-01 22:55:18)
+reflection paper.docx (File, Created: 2025-02-24 11:08:13)
+.nuuid.ini (File, Created: 2024-07-03 14:23:49)
+.pgadmin (Folder, Created: 2025-08-28 11:38:30)
+.cups (Folder, Created: 2024-03-29 12:42:33)
+.sqlite_history (File, Created: 2025-01-12 14:27:57)
+PycharmProjects (Folder, Created: 2025-06-02 10:10:01)
+Public (Folder, Created: 2024-10-15 21:13:06)
+france.docx (File, Created: 2025-02-25 20:48:30)
+a.txt (File, Created: 2024-04-21 21:06:35)
+.conan2 (Folder, Created: 2025-06-11 16:33:59)
+style.css (File, Created: 2024-09-13 22:33:05)
+CLionProjects (Folder, Created: 2025-07-28 13:19:23)
+.ssh (Folder, Created: 2025-08-27 13:42:16)
+raylib (Folder, Created: 2025-06-25 17:34:56)
+Movies (Folder, Created: 2025-06-25 17:34:51)
+Applications (Folder, Created: 2025-07-20 21:11:19)
+.gradle (Folder, Created: 2025-05-24 14:45:58)
+.Trash (Folder, Created: 2025-08-27 15:47:47)
+IdeaProjects (Folder, Created: 2025-06-25 17:34:51)
+.npm (Folder, Created: 2024-12-29 18:08:05)
+Documents (Folder, Created: 2025-08-26 09:34:39)
+.vscode (Folder, Created: 2024-09-13 21:10:24)
+.gem (Folder, Created: 2024-12-29 17:55:17)
+.swiftpm (Folder, Created: 2025-08-31 20:43:16)
+Downloads (Folder, Created: 2025-09-01 12:43:05)
+.python_history (File, Created: 2025-01-12 16:56:02)
+.cache (Folder, Created: 2025-06-04 20:57:28)
+.gitconfig (File, Created: 2025-06-11 14:22:34)
+.zsh_sessions (Folder, Created: 2025-09-01 15:40:33)
+дз для Ислама.docx (File, Created: 2025-02-28 19:09:45)
+toy-shell> exit
+Exiting toy shell.
