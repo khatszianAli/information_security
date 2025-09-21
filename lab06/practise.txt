@@ -1,0 +1,19 @@
+newowner@MacBookPro lab06 % touch file.txt
+newowner@MacBookPro lab06 % ls -la
+total 0
+drwxr-xr-x   3 newowner  staff   96 Sep 21 21:11 .
+drwxr-xr-x  11 newowner  staff  352 Sep 21 21:09 ..
+-rw-r--r--   1 newowner  staff    0 Sep 21 21:11 file.txt
+newowner@MacBookPro lab06 % chmod 754 file.txt
+newowner@MacBookPro lab06 % ls -la
+total 0
+drwxr-xr-x   3 newowner  staff   96 Sep 21 21:11 .
+drwxr-xr-x  11 newowner  staff  352 Sep 21 21:09 ..
+-rwxr-xr--   1 newowner  staff    0 Sep 21 21:11 file.txt
+newowner@MacBookPro lab06 % ls -l file.txt
+-rwxr-xr--  1 newowner  staff  0 Sep 21 21:11 file.txt
+newowner@MacBookPro lab06 % # Simple way (modern)
+newowner@MacBookPro lab06 % sudo chown user1:mygroup file.txt
+
+newowner@MacBookPro lab06 % ls -l file.txt
+-rwxr-xr--  1 user1  mygroup  0 Sep 21 21:11 file.txt
