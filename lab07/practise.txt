@@ -1,0 +1,32 @@
+newowner@news-MacBook-Pro lab07 % touch file.txt
+newowner@news-MacBook-Pro lab07 % nano write_line.sh
+newowner@news-MacBook-Pro lab07 % chmod +x /write_line.sh 
+
+chmod: /write_line.sh: No such file or directory
+newowner@news-MacBook-Pro lab07 % chmod +x /lab07/write_line.sh
+
+chmod: /lab07/write_line.sh: No such file or directory
+newowner@news-MacBook-Pro lab07 % chmod +x write_line.sh 
+
+newowner@news-MacBook-Pro lab07 % crontab -e
+crontab: no crontab for newowner - using an empty one
+crontab: installing new crontab
+"/tmp/crontab.PRty4wUwGJ":0: bad minute
+crontab: errors in crontab file, can't install
+Do you want to retry the same edit? y
+crontab: installing new crontab
+"/tmp/crontab.PRty4wUwGJ":0: bad minute
+crontab: errors in crontab file, can't install
+Do you want to retry the same edit? y
+crontab: "/usr/bin/vi" exited with status 1
+newowner@news-MacBook-Pro lab07 % cat file.txt
+newowner@news-MacBook-Pro lab07 % ls
+file.txt	write_line.sh
+newowner@news-MacBook-Pro lab07 % cat file.txt
+newowner@news-MacBook-Pro lab07 % nano send_email.py
+newowner@news-MacBook-Pro lab07 % chmod +x /path/to/send_email.py
+
+chmod: /path/to/send_email.py: No such file or directory
+newowner@news-MacBook-Pro lab07 % chmod +x send_email.py 
+
+
