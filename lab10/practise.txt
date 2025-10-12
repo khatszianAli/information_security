@@ -1,0 +1,75 @@
+etching downloads for: nginx
+==> Downloading https://ghcr.io/v2/homebrew/core/nginx/manifests/1.29.2
+######################################################################### 100.0%
+==> Fetching dependencies for nginx: openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.6.0
+######################################################################### 100.0%
+==> Fetching openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:9a8fa2ae
+######################################################################### 100.0%
+==> Fetching nginx
+==> Downloading https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:13ab2327cfe3
+######################################################################### 100.0%
+==> Installing nginx dependency: openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.6.0
+Already downloaded: /Users/newowner/Library/Caches/Homebrew/downloads/403c903e557d19d801f4c6b4f635c9553af72a487024139a5773e636c884ef9e--openssl@3-3.6.0.bottle_manifest.json
+==> Pouring openssl@3--3.6.0.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/openssl@3/3.6.0: 7,609 files, 36.0MB
+==> Pouring nginx--1.29.2.arm64_sequoia.bottle.tar.gz
+==> Caveats
+Docroot is: /opt/homebrew/var/www
+
+The default port has been set in /opt/homebrew/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /opt/homebrew/etc/nginx/servers/.
+
+To start nginx now and restart at login:
+  brew services start nginx
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/nginx/bin/nginx -g daemon\ off\;
+==> Summary
+🍺  /opt/homebrew/Cellar/nginx/1.29.2: 27 files, 2.5MB
+==> Running `brew cleanup nginx`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+Removing: /Users/newowner/Library/Caches/Homebrew/nginx_bottle_manifest--1.29.1... (14KB)
+Removing: /Users/newowner/Library/Caches/Homebrew/nginx--1.29.1... (1.4MB)
+==> Caveats
+==> nginx
+Docroot is: /opt/homebrew/var/www
+
+The default port has been set in /opt/homebrew/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /opt/homebrew/etc/nginx/servers/.
+
+To start nginx now and restart at login:
+  brew services start nginx
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/nginx/bin/nginx -g daemon\ off\;
+newowner@MacBookPro information_security % nano /etc/nginx/sites-available/my_site
+
+newowner@MacBookPro information_security % sudo nano /usr/local/etc/nginx/servers/my_site.conf
+
+Password:
+newowner@MacBookPro information_security % ^[[200~sudo nano /usr/local/etc/nginx/servers/my_site.conf
+zsh: bad pattern: ^[[200~sudo
+newowner@MacBookPro information_security % sudo nano /usr/local/etc/nginx/servers/my_site.conf
+
+Password:
+newowner@MacBookPro information_security % sudo mkdir -p /usr/local/var/www
+echo "<div>My NGINX site on 8000</div>" | sudo tee /usr/local/var/www/my_site.html
+
+<div>My NGINX site on 8000</div>
+newowner@MacBookPro information_security % sudo nginx -t
+brew services restart nginx
+
+nginx: the configuration file /opt/homebrew/etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /opt/homebrew/etc/nginx/nginx.conf test is successful
+==> Successfully started `nginx` (label: homebrew.mxcl.nginx)
+Name          Status  User     File
+dbus          none             
+nginx         started newowner ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+postgresql@14 started newowner ~/Library/LaunchAgents/homebrew.mxcl.postgresql@14.plist
+unbound       none  
