@@ -1,0 +1,316 @@
+newowner@MacBookPro ~ % cd information_security 
+newowner@MacBookPro information_security % cd lab05
+newowner@MacBookPro lab05 % sudo sysadminctl -addUser user1
+Password:
+2025-10-12 15:15:17.407 sysadminctl[14298:3450378] User named 'user1' already exists.
+newowner@MacBookPro lab05 % sudo sysadminctl -addUser user2
+2025-10-12 15:15:25.432 sysadminctl[14304:3450499] ----------------------------
+2025-10-12 15:15:25.432 sysadminctl[14304:3450499] No clear text password or interactive option was specified (adduser, change/reset password will not allow user to use FDE) !
+2025-10-12 15:15:25.432 sysadminctl[14304:3450499] ----------------------------
+2025-10-12 15:15:25.736 sysadminctl[14304:3450499] Creating user record…
+2025-10-12 15:15:25.780 sysadminctl[14304:3450499] Assigning UID: 503 GID: 20
+2025-10-12 15:15:28.015 sysadminctl[14304:3450499] Creating home directory at /Users/user2
+newowner@MacBookPro lab05 % sudo sysadminctl -addUser user2 -password 'ChangeMe123'
+2025-10-12 15:15:39.774 sysadminctl[14358:3451327] User named 'user2' already exists.
+newowner@MacBookPro lab05 % dscl . -list /Users
+_accessoryupdater
+_amavisd
+_analyticsd
+_aonsensed
+_appinstalld
+_appleevents
+_applepay
+_appowner
+_appserver
+_appstore
+_ard
+_assetcache
+_astris
+_atsserver
+_audiomxd
+_avbdeviced
+_avphidbridge
+_backgroundassets
+_biome
+_calendar
+_captiveagent
+_ces
+_clamav
+_cmiodalassistants
+_coreaudiod
+_coremediaiod
+_coreml
+_corespeechd
+_ctkd
+_cvmsroot
+_cvs
+_cyrus
+_darwindaemon
+_datadetectors
+_demod
+_devdocs
+_devicemgr
+_diagnosticservicesd
+_diskimagesiod
+_displaypolicyd
+_distnote
+_dovecot
+_dovenull
+_dpaudio
+_driverkit
+_eligibilityd
+_eppc
+_findmydevice
+_fpsd
+_ftp
+_gamecontrollerd
+_geod
+_hidd
+_iconservices
+_installassistant
+_installcoordinationd
+_installer
+_jabber
+_kadmin_admin
+_kadmin_changepw
+_knowledgegraphd
+_krb_anonymous
+_krb_changepw
+_krb_kadmin
+_krb_kerberos
+_krb_krbtgt
+_krbfast
+_krbtgt
+_launchservicesd
+_lda
+_locationd
+_logd
+_lp
+_mailman
+_mbsetupuser
+_mcxalr
+_mdnsresponder
+_mmaintenanced
+_mobileasset
+_mobilegestalthelper
+_modelmanagerd
+_mysql
+_naturallanguaged
+_nearbyd
+_netbios
+_netstatistics
+_networkd
+_neuralengine
+_notification_proxy
+_nsurlsessiond
+_oahd
+_ondemand
+_postfix
+_postgres
+_qtss
+_reportmemoryexception
+_reportsystemmemory
+_rmd
+_sandbox
+_screensaver
+_scsd
+_securityagent
+_sntpd
+_softwareupdate
+_spotlight
+_sshd
+_svn
+_swtransparencyd
+_systemstatusd
+_taskgated
+_teamsserver
+_terminusd
+_timed
+_timezone
+_tokend
+_trustd
+_trustevaluationagent
+_unknown
+_update_sharing
+_usbmuxd
+_uucp
+_warmd
+_webauthserver
+_windowserver
+_www
+_wwwproxy
+_xserverdocs
+daemon
+newowner
+nobody
+root
+user1
+user2
+newowner@MacBookPro lab05 % sudo chfn user2
+Changing finger information for user2.
+chfn: no changes made
+newowner@MacBookPro lab05 % su - user2
+Password:
+su: Sorry
+newowner@MacBookPro lab05 % sudo passwd user2
+
+Changing password for user2.
+New password:
+Retype new password:
+
+################################### WARNING ###################################
+# This tool does not update the login keychain password.                      #
+# To update it, run `security set-keychain-password` as the user in question, #
+# or as root providing a path to such user's login keychain.                  #
+###############################################################################
+
+newowner@MacBookPro lab05 % su - user2       
+Password:
+user2@MacBookPro ~ % sudo dseditgroup -o create developers
+Password:
+Sorry, try again.
+newowner@MacBookPro ~ % sudo dseditgroup -o create developers
+newowner@MacBookPro ~ % sudo dseditgroup -o edit -a user2 -t user developers
+newowner@MacBookPro ~ % dscl . -read /Groups/developers
+dsAttrTypeNative:record_daemon_version: 9054000
+AppleMetaNodeLocation: /Local/Default
+GeneratedUID: E4F80939-96A5-485F-87C9-8602E5853936
+GroupMembers: 2EAC546C-1ED5-4FB1-9D59-263AC2837200
+GroupMembership: user2
+PrimaryGroupID: 501
+RecordName: developers
+RecordType: dsRecTypeStandard:Groups
+newowner@MacBookPro ~ % sudo pkill -u user2
+newowner@MacBookPro ~ %  dscl . -list /Users
+_accessoryupdater
+_amavisd
+_analyticsd
+_aonsensed
+_appinstalld
+_appleevents
+_applepay
+_appowner
+_appserver
+_appstore
+_ard
+_assetcache
+_astris
+_atsserver
+_audiomxd
+_avbdeviced
+_avphidbridge
+_backgroundassets
+_biome
+_calendar
+_captiveagent
+_ces
+_clamav
+_cmiodalassistants
+_coreaudiod
+_coremediaiod
+_coreml
+_corespeechd
+_ctkd
+_cvmsroot
+_cvs
+_cyrus
+_darwindaemon
+_datadetectors
+_demod
+_devdocs
+_devicemgr
+_diagnosticservicesd
+_diskimagesiod
+_displaypolicyd
+_distnote
+_dovecot
+_dovenull
+_dpaudio
+_driverkit
+_eligibilityd
+_eppc
+_findmydevice
+_fpsd
+_ftp
+_gamecontrollerd
+_geod
+_hidd
+_iconservices
+_installassistant
+_installcoordinationd
+_installer
+_jabber
+_kadmin_admin
+_kadmin_changepw
+_knowledgegraphd
+_krb_anonymous
+_krb_changepw
+_krb_kadmin
+_krb_kerberos
+_krb_krbtgt
+_krbfast
+_krbtgt
+_launchservicesd
+_lda
+_locationd
+_logd
+_lp
+_mailman
+_mbsetupuser
+_mcxalr
+_mdnsresponder
+_mmaintenanced
+_mobileasset
+_mobilegestalthelper
+_modelmanagerd
+_mysql
+_naturallanguaged
+_nearbyd
+_netbios
+_netstatistics
+_networkd
+_neuralengine
+_notification_proxy
+_nsurlsessiond
+_oahd
+_ondemand
+_postfix
+_postgres
+_qtss
+_reportmemoryexception
+_reportsystemmemory
+_rmd
+_sandbox
+_screensaver
+_scsd
+_securityagent
+_sntpd
+_softwareupdate
+_spotlight
+_sshd
+_svn
+_swtransparencyd
+_systemstatusd
+_taskgated
+_teamsserver
+_terminusd
+_timed
+_timezone
+_tokend
+_trustd
+_trustevaluationagent
+_unknown
+_update_sharing
+_usbmuxd
+_uucp
+_warmd
+_webauthserver
+_windowserver
+_www
+_wwwproxy
+_xserverdocs
+daemon
+newowner
+nobody
+root
+user1

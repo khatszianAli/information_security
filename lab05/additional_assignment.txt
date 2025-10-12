@@ -1,0 +1,43 @@
+Last login: Sun Oct 12 15:25:49 on ttys002
+newowner@MacBookPro ~ % sudo dseditgroup -o create devs
+Password:
+newowner@MacBookPro ~ % sudo sysadminctl -addUser user1 -password 'PassUser1!'
+sudo sysadminctl -addUser user2 -password 'PassUser2!'
+
+2025-10-12 15:27:51.119 sysadminctl[14918:3467286] User named 'user1' already exists.
+2025-10-12 15:27:51.202 sysadminctl[14920:3467293] ----------------------------
+2025-10-12 15:27:51.202 sysadminctl[14920:3467293] No clear text password or interactive option was specified (adduser, change/reset password will not allow user to use FDE) !
+2025-10-12 15:27:51.202 sysadminctl[14920:3467293] ----------------------------
+2025-10-12 15:27:51.448 sysadminctl[14920:3467293] Creating user record…
+2025-10-12 15:27:52.176 sysadminctl[14920:3467293] Assigning UID: 503 GID: 20
+2025-10-12 15:27:54.938 sysadminctl[14920:3467293] Creating home directory at /Users/user2
+newowner@MacBookPro ~ % sudo createhomedir -c -u user1
+sudo createhomedir -c -u user2
+creating home directories for (MacBookPro)
+creating home directories for (MacBookPro)
+newowner@MacBookPro ~ % sudo dseditgroup -o edit -a user1 -t user devs
+newowner@MacBookPro ~ % dscl . -read /Groups/devs
+dsAttrTypeNative:record_daemon_version: 9054000
+AppleMetaNodeLocation: /Local/Default
+GeneratedUID: BF3034C1-C914-49B1-A1ED-D24CBAB28763
+GroupMembers: ECB741A7-CF4F-4961-AD65-308610E8E8CB
+GroupMembership: user1
+PrimaryGroupID: 502
+RecordName: devs
+RecordType: dsRecTypeStandard:Groups
+newowner@MacBookPro ~ % sudo mkdir -p /Users/Shared/dev_project
+sudo chown user1:devs /Users/Shared/dev_project
+newowner@MacBookPro ~ % sudo -u user1 touch /Users/Shared/dev_project/from_user1.txt
+sudo -u user1 bash -c 'echo "Hello from user1" > /Users/Shared/dev_project/from_user1.txt'
+ls -l /Users/Shared/dev_project
+total 8
+-rw-r--r--  1 user1  devs  17 Oct 12 15:29 from_user1.txt
+newowner@MacBookPro ~ % sudo -u user2 bash -c 'echo "user2 tries to write" > /Users/Shared/dev_project/from_user2.txt' 2>/tmp/user2_err || true
+cat /tmp/user2_err
+bash: /Users/Shared/dev_project/from_user2.txt: Permission denied
+newowner@MacBookPro ~ % sudo dseditgroup -o edit -a user2 -t user devs
+newowner@MacBookPro ~ % sudo -u user2 bash -c 'echo "user2 writing after group add" > /Users/Shared/dev_project/from_user2.txt'
+ls -l /Users/Shared/dev_project
+bash: /Users/Shared/dev_project/from_user2.txt: Permission denied
+total 8
+-rw-r--r--  1 user1  devs  17 Oct 12 15:29 from_user1.txt
