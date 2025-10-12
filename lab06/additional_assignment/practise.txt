@@ -1,0 +1,32 @@
+newowner@MacBookPro additional_assignment % ls -l
+total 0
+-rw-r--r--  1 newowner  staff  0 Oct 12 15:38 file.txt
+newowner@MacBookPro additional_assignment % chown newowner file
+chown: file: No such file or directory
+newowner@MacBookPro additional_assignment % chown newowner file.txt
+newowner@MacBookPro additional_assignment % chown root file.txt
+chown: file.txt: Operation not permitted
+newowner@MacBookPro additional_assignment % sudo chown root file.txt
+Password:
+newowner@MacBookPro additional_assignment % ls -l
+total 0
+-rw-r--r--  1 root  staff  0 Oct 12 15:38 file.txt
+newowner@MacBookPro additional_assignment % chown newowner file.txt 
+chown: file.txt: Operation not permitted
+newowner@MacBookPro additional_assignment % sudo chown newowner file.txt
+newowner@MacBookPro additional_assignment % ls -l                       
+total 0
+-rw-r--r--  1 newowner  staff  0 Oct 12 15:38 file.txt
+newowner@MacBookPro additional_assignment %
+newowner@MacBookPro additional_assignment % chmod 777 file.txt
+newowner@MacBookPro additional_assignment % ls -l
+total 0
+-rwxrwxrwx  1 newowner  staff  0 Oct 12 15:38 file.txt
+newowner@MacBookPro additional_assignment % chmod 711 file.txt
+newowner@MacBookPro additional_assignment % ls -l             
+total 0
+-rwx--x--x  1 newowner  staff  0 Oct 12 15:38 file.txt
+newowner@MacBookPro additional_assignment % chmod 754 file.txt
+newowner@MacBookPro additional_assignment % ls -l             
+total 0
+-rwxr-xr--  1 newowner  staff  0 Oct 12 15:38 file.txt
