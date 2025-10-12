@@ -1,1 +1,5 @@
-In macOS, file permissions control access for the owner, group, and others. Group membership is key for collaboration without giving global access. Using setgid on shared directories ensures new files inherit the group, while umask sets default permissions—umask 002 allows group members to write. ACLs provide finer control when standard permissions aren’t enough. Users not in the group cannot write, ensuring isolation. Best practices include using group ownership with setgid, setting umask 002 for collaborators, creating per-project groups, using ACLs for exceptions, and regularly auditing permissions and group membership.
+In macOS, file permissions control access for the owner, group, and others. Group membership is key for collaboration without giving 
+global access. Using setgid on shared directories ensures new files inherit the group, while umask sets default permissions—umask 002 
+allows group members to write. ACLs provide finer control when standard permissions aren’t enough. Users not in the group cannot write, 
+ensuring isolation. Best practices include using group ownership with setgid, setting umask 002 for collaborators, creating per-project
+groups, using ACLs for exceptions, and regularly auditing permissions and group membership.
