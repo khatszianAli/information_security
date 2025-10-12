@@ -1,0 +1,4 @@
+[8000][http-post-form] host: localhost   login: admin   password: 12345admin
+[STATUS] attack finished for localhost (valid pair found)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-10-12 13:59:48
