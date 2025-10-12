@@ -1,0 +1,107 @@
+==> Summary
+🍺  /opt/homebrew/Cellar/python@3.14/3.14.0: 3,743 files, 69.5MB
+==> Running `brew cleanup python@3.14`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Pouring python-setuptools--80.9.0_1.all.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/python-setuptools/80.9.0_1: 1,497 files, 12.0MB
+==> Running `brew cleanup python-setuptools`...
+==> Caveats
+==> python@3.14
+Python is installed as
+  /opt/homebrew/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, are installed into
+  /opt/homebrew/opt/python@3.14/libexec/bin
+
+`idle3.14` requires tkinter, which is available separately:
+  brew install python-tk@3.14
+
+See: https://docs.brew.sh/Homebrew-and-Python
+newowner@MacBookPro lab11 % git clone https://github.com/ytdl-org/youtube-dl.git 
+
+Cloning into 'youtube-dl'...
+remote: Enumerating objects: 105474, done.
+remote: Counting objects: 100% (165/165), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 105474 (delta 106), reused 89 (delta 89), pack-reused 105309 (from 3)
+Receiving objects: 100% (105474/105474), 64.13 MiB | 5.75 MiB/s, done.
+Resolving deltas: 100% (78266/78266), done.
+newowner@MacBookPro lab11 % cd youtube-dl
+Copying youtube_dl.egg-info to /opt/homebrew/lib/python3.14/site-packages/youtube_dl-2025.4.7-py3.14.egg-info
+running install_scripts
+Installing youtube-dl script to /opt/homebrew/bin
+newowner@MacBookPro youtube-dl % youtube-dl --version
+2025.04.07
+newowner@MacBookPro lab11 % git clone https://github.com/dylanaraps/neofetch.git 
+Cloning into 'neofetch'...
+remote: Enumerating objects: 16689, done.
+remote: Counting objects: 100% (2117/2117), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 16689 (delta 2113), reused 2110 (delta 2110), pack-reused 14572 (from 1)
+Receiving objects: 100% (16689/16689), 7.21 MiB | 4.63 MiB/s, done.
+Resolving deltas: 100% (10149/10149), done.
+newowner@MacBookPro lab11 % cd neofetch
+newowner@MacBookPro neofetch % sudo make install
+Password:
+cp: /usr/bin/neofetch: Operation not permitted
+make: *** [install] Error 1
+newowner@MacBookPro neofetch % sudo make install
+cp: /usr/bin/neofetch: Operation not permitted
+make: *** [install] Error 1
+newowner@MacBookPro neofetch % make install
+cp: /usr/bin/neofetch: Operation not permitted
+make: *** [install] Error 1
+newowner@MacBookPro neofetch % sudo make install
+cp: /usr/bin/neofetch: Operation not permitted
+make: *** [install] Error 1
+newowner@MacBookPro neofetch % ls -l
+total 808
+-rw-r--r--  1 newowner  staff    3877 Oct 12 12:55 CONTRIBUTING.md
+-rw-r--r--  1 newowner  staff    1083 Oct 12 12:55 LICENSE.md
+-rw-r--r--  1 newowner  staff     418 Oct 12 12:55 Makefile
+-rw-r--r--  1 newowner  staff    2037 Oct 12 12:55 README.md
+-rwxr-xr-x  1 newowner  staff  376936 Oct 12 12:55 neofetch
+-rw-r--r--  1 newowner  staff   12449 Oct 12 12:55 neofetch.1
+newowner@MacBookPro neofetch % amke
+zsh: command not found: amke
+newowner@MacBookPro neofetch % maek
+zsh: command not found: maek
+newowner@MacBookPro neofetch % make
+Run 'make install' to install Neofetch.
+newowner@MacBookPro neofetch % make install
+cp: /usr/bin/neofetch: Operation not permitted
+make: *** [install] Error 1
+newowner@MacBookPro neofetch % sudo make install
+cp: /usr/bin/neofetch: Operation not permitted
+make: *** [install] Error 1
+newowner@MacBookPro neofetch % make PREFIX=/usr/local install
+mkdir: /usr/local/share: Permission denied
+make: *** [install] Error 1
+newowner@MacBookPro neofetch % sudo make PREFIX=/usr/local install
+newowner@MacBookPro neofetch % neoftech
+zsh: command not found: neoftech
+newowner@MacBookPro neofetch % neofetch
+                    c.'          newowner@MacBookPro 
+                 ,xNMM.          ------------------- 
+               .OMMMMo           OS: macOS 15.6.1 24G90 arm64 
+               lMM"              Host: MacBookPro17,1 
+     .;loddo:.  .olloddol;.      Kernel: 24.6.0 
+   cKMMMMMMMMMMNWMMMMMMMMMM0:    Uptime: 10 days, 1 hour, 45 mins 
+ .KMMMMMMMMMMMMMMMMMMMMMMMWd.    Packages: 124 (brew) 
+ XMMMMMMMMMMMMMMMMMMMMMMMX.      Shell: zsh 5.9 
+;MMMMMMMMMMMMMMMMMMMMMMMM:       Resolution: 2560x1600 
+:MMMMMMMMMMMMMMMMMMMMMMMM:       DE: Aqua 
+.MMMMMMMMMMMMMMMMMMMMMMMMX.      WM: Quartz Compositor 
+ kMMMMMMMMMMMMMMMMMMMMMMMMWd.    WM Theme: Blue (Light) 
+ 'XMMMMMMMMMMMMMMMMMMMMMMMMMMk   Terminal: Apple_Terminal 
+  'XMMMMMMMMMMMMMMMMMMMMMMMMK.   Terminal Font: SFMono-Regular 
+    kMMMMMMMMMMMMMMMMMMMMMMd     CPU: Apple M1 
+     ;KMMMMMMMWXXWMMMMMMMk.      GPU: Apple M1 
+       "cooc*"    "*coo'"        Memory: 6701MiB / 8192MiB 
+
+                                                         
+                                                         
+
+newowner@MacBookPro neofetch % 
