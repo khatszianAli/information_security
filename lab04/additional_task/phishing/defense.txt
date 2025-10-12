@@ -1,0 +1,11 @@
+1. Technology: The Digital Shield (SEGs and Content Filtering)
+
+Before a malicious email even hits your inbox, Secure Email Gateways (SEGs) act as bouncers, checking the sender's reputation and scanning attachments for viruses. These systems also employ AI and content filtering to spot urgency, suspicious language, and misspelled domains in the email's body. Critically, if you click a link, the gateway often rewrites the URL to check the destination first in a secure sandbox, preventing you from landing on the fake login page if it's confirmed to be malicious.
+
+2. Process: The Network Guardrails (DNS Filtering and MFA)
+
+Even if a scam email slips through, the next layer stops your browser from connecting to the threat. DNS Filtering blocks traffic to known malicious domains, making the phishing link useless. Most importantly, Multi-Factor Authentication (MFA) is the ultimate failsafe: if you accidentally type your username and password into a fake site, the attacker still can't log in because they are missing the required one-time code from your phone.
+
+3. Human Element: The Savvy User (Employee Awareness)
+
+Since attackers target trust, employee training is vital. Companies run phishing simulation campaigns—sending safe, fake scams—to teach employees how to spot red flags and report suspicious messages immediately. This Red Flags Training teaches everyone to inspect the URL (does the website address match the real company's?), check for unusual urgency, and verify the sender. Finally, the Principle of Least Privilege (PoLP) ensures that if a user is fooled, the attacker gains only limited access, minimizing the overall damage.
