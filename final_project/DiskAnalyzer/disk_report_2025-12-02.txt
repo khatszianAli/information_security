@@ -1,0 +1,41 @@
+Disk Analyzer Report
+Generated: 2025-12-02 14:41:55
+Root scanned: /
+Total size under root: 502.56 GB
+
+Top 30 largest directories:
+------------------------------------------------------------
+ 1.  502.56 GB  /
+ 2.  297.27 GB  /System
+ 3.  271.97 GB  /System/Volumes
+ 4.  225.48 GB  /System/Volumes/Data
+ 5.  113.69 GB  /Users
+ 6.  113.69 GB  /System/Volumes/Data/Users
+ 7.  113.69 GB  /Users/newowner
+ 8.  113.69 GB  /System/Volumes/Data/Users/newowner
+ 9.   70.70 GB  /Users/newowner/Library
+10.   70.70 GB  /System/Volumes/Data/Users/newowner/Library
+11.   52.52 GB  /Library
+12.   52.52 GB  /System/Volumes/Data/Library
+13.   51.07 GB  /Library/Developer
+14.   51.07 GB  /System/Volumes/Data/Library/Developer
+15.   45.88 GB  /Library/Developer/CoreSimulator
+16.   45.88 GB  /System/Volumes/Data/Library/Developer/CoreSimulator
+17.   40.42 GB  /System/Volumes/Preboot
+18.   31.36 GB  /Library/Developer/CoreSimulator/Volumes
+19.   31.36 GB  /System/Volumes/Data/Library/Developer/CoreSimulator/Volumes
+20.   28.26 GB  /System/Volumes/Preboot/Cryptexes
+21.   27.25 GB  /Users/newowner/Library/Application Support
+22.   27.25 GB  /System/Volumes/Data/Users/newowner/Library/Application Support
+23.   26.67 GB  /System/Volumes/Data/Applications
+24.   26.67 GB  /Applications
+25.   23.80 GB  /System/Library
+26.   20.00 GB  /System/Volumes/Data/Users/newowner/Library/Developer
+27.   20.00 GB  /Users/newowner/Library/Developer
+28.   17.16 GB  /System/Volumes/Data/Users/newowner/.conan2
+29.   17.16 GB  /Users/newowner/.conan2
+30.   17.16 GB  /System/Volumes/Data/Users/newowner/.conan2/p
+
+Notes:
+- Sizes are recursive (include subdirectories).
+- Some files/dirs may be skipped if permission denied.
