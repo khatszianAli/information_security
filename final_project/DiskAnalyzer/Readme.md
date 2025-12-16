@@ -2,7 +2,7 @@
 
 DiskAnalyzer is a Python tool that scans directories, calculates folder sizes, and generates detailed disk usage reports.  
 It can export reports as text and can optionally email the report automatically written by Ali Khantszian(ka12438) for the final project of course Information Security.
-
+<img src="https://github.com/khatszianAli/information_security/blob/main/final_project/DiskAnalyzer/ezgif.com-video-to-gif-converter.gif" width="700">
 ---
 
 ## Features
