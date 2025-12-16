@@ -42,8 +42,12 @@ macOS example:
 ```bash
 python3 DiskAnalyzer.py --root /Users/yourusername --out ~/disk_reports/disk_report_$(date +%F).txt --json
 ```
+
 Email Reports
 To enable sending reports by email, set these environment variables:
+```bash
+crontab -e
+```
 ```bash
 export EMAIL_USER="your_email@gmail.com"
 export EMAIL_PASS="your_app_password"
